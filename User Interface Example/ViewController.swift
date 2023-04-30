@@ -16,6 +16,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func actionSheet(_ sender: Any) {
+        let basicAlertController=UIAlertController(title: "Title", message: "Message", preferredStyle: .actionSheet)
+        
+        let cancelAction=UIAlertAction(title: "Cancel", style:.cancel){
+            action in
+            print("clicked cancel")
+        }
+        basicAlertController.addAction(cancelAction)
+        
+        let approveAction=UIAlertAction(title: "Approve", style: .default){
+            action in
+            print("approve cancel")
+        }
+        
+        basicAlertController.addAction(approveAction)
+        
+        self.present(basicAlertController, animated: true)
     }
     @IBAction func customAlert(_ sender: Any) {
         let customAlertController=UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
