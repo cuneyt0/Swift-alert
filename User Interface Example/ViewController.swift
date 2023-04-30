@@ -18,6 +18,30 @@ class ViewController: UIViewController {
     @IBAction func actionSheet(_ sender: Any) {
     }
     @IBAction func customAlert(_ sender: Any) {
+        let customAlertController=UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
+       
+       
+        
+        customAlertController.addTextField{ textField in
+            textField.placeholder="E-Mail"
+            textField.keyboardType = .emailAddress
+        }
+        customAlertController.addTextField{ textField in
+            textField.placeholder="Password"
+            textField.isSecureTextEntry = true
+        }
+        let savedAction=UIAlertAction(title: "Saved", style:.cancel){
+            action in
+            print("saved cancel")
+            
+            let savedEmail=(customAlertController.textFields![0] as  UITextField).text!
+            let savedPassord=(customAlertController.textFields![1] as  UITextField).text!
+            
+            self.resultAlert.text = "E-Mail: \(savedEmail) Password: \(savedPassord) ";
+        }
+        customAlertController.addAction(savedAction)
+        self.present(customAlertController, animated: true)
+        
     }
     
     @IBAction func basicAlert(_ sender: Any) {
