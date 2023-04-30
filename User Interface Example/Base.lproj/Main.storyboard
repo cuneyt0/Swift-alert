@@ -26,16 +26,25 @@
                                 <rect key="frame" x="141.66666666666666" y="300" width="110" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Basic Alert "/>
+                                <connections>
+                                    <action selector="basicAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZb-OO-G1w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nk4-Pa-XVp">
                                 <rect key="frame" x="134.66666666666666" y="409" width="123.99999999999997" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Custom Alert"/>
+                                <connections>
+                                    <action selector="customAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ikQ-Ts-pjX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTf-ZT-u7O">
                                 <rect key="frame" x="135.66666666666666" y="540" width="121.99999999999997" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Action Sheet"/>
+                                <connections>
+                                    <action selector="actionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="33h-hi-u47"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -51,6 +60,9 @@
                             <constraint firstItem="Zji-Zv-MUX" firstAttribute="top" secondItem="gYV-gI-j6l" secondAttribute="bottom" constant="109" id="hPb-sQ-yar"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultAlert" destination="gYV-gI-j6l" id="Xyl-OH-Yp8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
